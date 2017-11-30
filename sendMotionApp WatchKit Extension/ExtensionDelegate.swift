@@ -12,7 +12,6 @@ import WatchConnectivity
 class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     
     internal func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
         if WCSession.isSupported() {
             let session = WCSession.default
             session.delegate = self

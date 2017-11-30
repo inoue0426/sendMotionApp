@@ -26,25 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     var window: UIWindow?
     
-    // When the message was received
-    
-    
-    
-    //WCSessionDelegate
-    //    @available(iOS 9.3, *)
-    //    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-    //        print("activationDidComplete")
-    //    }
-    //
-    //    func sessionDidBecomeInactive(_ session: WCSession) {
-    //        print("sessionDidBecomeInactive")
-    //    }
-    //
-    //    func sessionDidDeactivate(_ session: WCSession) {
-    //        print("sessionDidDeactivate")
-    //    }
-    //
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

@@ -37,11 +37,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             }
             
             if deviceMotion != nil {
-//                print("attitude = \(deviceMotion!.attitude)")
-//                print("gravity = \(deviceMotion!.gravity)")
-//                print("rotationRate = \(deviceMotion!.rotationRate)")
-//                print("userAcceleration = \(deviceMotion!.userAcceleration)")
-//
                 self.attitude = "\(deviceMotion!.attitude)"
                 self.gravity = "\(deviceMotion!.gravity)"
                 self.rotationRate = "\(deviceMotion!.rotationRate)"
@@ -57,7 +52,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             let session = WCSession.default
             session.delegate = self
             session.activate()
-            //            self.sendMessage()
         }
     }
     
@@ -69,13 +63,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 "rotationRate": rotationRate,
                 "userAcceleration": userAcceleration
             ]
-//            applicationDict = ["test":"Hello, World!!"]
+
             WCSession.default.sendMessage(applicationDict, replyHandler: {(reply) -> Void in
                 print(reply)
-//                print("           ")
             }){(error) -> Void in
                 print(error)
-//                print("gggggggggg")
             }
         }
     }
@@ -86,6 +78,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        //        print(message[0] as String)
+
     }
 }
