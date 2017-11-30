@@ -28,7 +28,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         
 //        print(message["test"] as! String)
         
-        replyHandler(["attitude" : message["attitude"] as! String ])
+        replyHandler(["reply" : message["OK"] as! String ])
     }
     
     @available(iOS 9.3, *)
