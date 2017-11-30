@@ -12,11 +12,11 @@ import WatchConnectivity
 import CoreMotion
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
-    @IBOutlet var label: WKInterfaceLabel!
     
     let motionManager = CMMotionManager()
     let queue = OperationQueue()
     
+    var applicationDict = [String: String]()
     var attitude = ""
     var gravity = ""
     var rotationRate = ""
@@ -46,9 +46,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 self.gravity = "\(deviceMotion!.gravity)"
                 self.rotationRate = "\(deviceMotion!.rotationRate)"
                 self.userAcceleration = "\(deviceMotion!.userAcceleration)"
-                
-                self.sendMessage()
             }
+            sleep(UInt32(0.5))
+            self.sendMessage()
         }
     }
     
@@ -63,17 +63,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func sendMessage(){
         if WCSession.default.isReachable {
-            let applicationDict = [
+            applicationDict = [
                 "attitude": attitude,
                 "gravity": gravity,
                 "rotationRate": rotationRate,
                 "userAcceleration": userAcceleration
             ]
-            //            let applicationDict = ["test":"Hello, World!!"]
+//            applicationDict = ["test":"Hello, World!!"]
             WCSession.default.sendMessage(applicationDict, replyHandler: {(reply) -> Void in
                 print(reply)
+//                print("           ")
             }){(error) -> Void in
                 print(error)
+//                print("gggggggggg")
             }
         }
     }

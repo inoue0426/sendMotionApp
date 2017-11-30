@@ -26,9 +26,9 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         
-        print(message["test"] as! String)
+//        print(message["test"] as! String)
         
-        replyHandler(["reply" : "OK"])
+        replyHandler(["attitude" : message["attitude"] as! String ])
     }
     
     @available(iOS 9.3, *)
