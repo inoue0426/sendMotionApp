@@ -1,0 +1,838 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27D653D11FD0096E002AD14F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D653D01FD0096E002AD14F /* AppDelegate.swift */; };
+		27D653D31FD0096E002AD14F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D653D21FD0096E002AD14F /* ViewController.swift */; };
+		27D653D61FD0096E002AD14F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D653D41FD0096E002AD14F /* Main.storyboard */; };
+		27D653D81FD0096E002AD14F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D653D71FD0096E002AD14F /* Assets.xcassets */; };
+		27D653DB1FD0096E002AD14F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D653D91FD0096E002AD14F /* LaunchScreen.storyboard */; };
+		27D653E61FD0096E002AD14F /* sendMotionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D653E51FD0096E002AD14F /* sendMotionAppTests.swift */; };
+		27D653F11FD0096E002AD14F /* sendMotionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D653F01FD0096E002AD14F /* sendMotionAppUITests.swift */; };
+		27D653F61FD0096E002AD14F /* sendMotionApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 27D653F51FD0096E002AD14F /* sendMotionApp WatchKit App.app */; };
+		27D653FC1FD0096E002AD14F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D653FA1FD0096E002AD14F /* Interface.storyboard */; };
+		27D653FE1FD0096E002AD14F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D653FD1FD0096E002AD14F /* Assets.xcassets */; };
+		27D654051FD0096E002AD14F /* sendMotionApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27D654041FD0096E002AD14F /* sendMotionApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		27D6540A1FD0096E002AD14F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D654091FD0096E002AD14F /* InterfaceController.swift */; };
+		27D6540C1FD0096E002AD14F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D6540B1FD0096E002AD14F /* ExtensionDelegate.swift */; };
+		27D6540E1FD0096E002AD14F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D6540D1FD0096E002AD14F /* NotificationController.swift */; };
+		27D654101FD0096E002AD14F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D6540F1FD0096E002AD14F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27D653E21FD0096E002AD14F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27D653C51FD0096E002AD14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27D653CC1FD0096E002AD14F;
+			remoteInfo = sendMotionApp;
+		};
+		27D653ED1FD0096E002AD14F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27D653C51FD0096E002AD14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27D653CC1FD0096E002AD14F;
+			remoteInfo = sendMotionApp;
+		};
+		27D653F71FD0096E002AD14F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27D653C51FD0096E002AD14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27D653F41FD0096E002AD14F;
+			remoteInfo = "sendMotionApp WatchKit App";
+		};
+		27D654061FD0096E002AD14F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27D653C51FD0096E002AD14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27D654031FD0096E002AD14F;
+			remoteInfo = "sendMotionApp WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		27D654181FD0096E002AD14F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				27D654051FD0096E002AD14F /* sendMotionApp WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D6541C1FD0096E002AD14F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				27D653F61FD0096E002AD14F /* sendMotionApp WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		27D653CD1FD0096E002AD14F /* sendMotionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sendMotionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D653D01FD0096E002AD14F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27D653D21FD0096E002AD14F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27D653D51FD0096E002AD14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27D653D71FD0096E002AD14F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27D653DA1FD0096E002AD14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27D653DC1FD0096E002AD14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D653E11FD0096E002AD14F /* sendMotionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sendMotionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D653E51FD0096E002AD14F /* sendMotionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendMotionAppTests.swift; sourceTree = "<group>"; };
+		27D653E71FD0096E002AD14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D653EC1FD0096E002AD14F /* sendMotionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sendMotionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D653F01FD0096E002AD14F /* sendMotionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendMotionAppUITests.swift; sourceTree = "<group>"; };
+		27D653F21FD0096E002AD14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D653F51FD0096E002AD14F /* sendMotionApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sendMotionApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D653FB1FD0096E002AD14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		27D653FD1FD0096E002AD14F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27D653FF1FD0096E002AD14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D654041FD0096E002AD14F /* sendMotionApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "sendMotionApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D654091FD0096E002AD14F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		27D6540B1FD0096E002AD14F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		27D6540D1FD0096E002AD14F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		27D6540F1FD0096E002AD14F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27D654111FD0096E002AD14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D654121FD0096E002AD14F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27D653CA1FD0096E002AD14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D653DE1FD0096E002AD14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D653E91FD0096E002AD14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D654011FD0096E002AD14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27D653C41FD0096E002AD14F = {
+			isa = PBXGroup;
+			children = (
+				27D653CF1FD0096E002AD14F /* sendMotionApp */,
+				27D653E41FD0096E002AD14F /* sendMotionAppTests */,
+				27D653EF1FD0096E002AD14F /* sendMotionAppUITests */,
+				27D653F91FD0096E002AD14F /* sendMotionApp WatchKit App */,
+				27D654081FD0096E002AD14F /* sendMotionApp WatchKit Extension */,
+				27D653CE1FD0096E002AD14F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27D653CE1FD0096E002AD14F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27D653CD1FD0096E002AD14F /* sendMotionApp.app */,
+				27D653E11FD0096E002AD14F /* sendMotionAppTests.xctest */,
+				27D653EC1FD0096E002AD14F /* sendMotionAppUITests.xctest */,
+				27D653F51FD0096E002AD14F /* sendMotionApp WatchKit App.app */,
+				27D654041FD0096E002AD14F /* sendMotionApp WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27D653CF1FD0096E002AD14F /* sendMotionApp */ = {
+			isa = PBXGroup;
+			children = (
+				27D653D01FD0096E002AD14F /* AppDelegate.swift */,
+				27D653D21FD0096E002AD14F /* ViewController.swift */,
+				27D653D41FD0096E002AD14F /* Main.storyboard */,
+				27D653D71FD0096E002AD14F /* Assets.xcassets */,
+				27D653D91FD0096E002AD14F /* LaunchScreen.storyboard */,
+				27D653DC1FD0096E002AD14F /* Info.plist */,
+			);
+			path = sendMotionApp;
+			sourceTree = "<group>";
+		};
+		27D653E41FD0096E002AD14F /* sendMotionAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				27D653E51FD0096E002AD14F /* sendMotionAppTests.swift */,
+				27D653E71FD0096E002AD14F /* Info.plist */,
+			);
+			path = sendMotionAppTests;
+			sourceTree = "<group>";
+		};
+		27D653EF1FD0096E002AD14F /* sendMotionAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27D653F01FD0096E002AD14F /* sendMotionAppUITests.swift */,
+				27D653F21FD0096E002AD14F /* Info.plist */,
+			);
+			path = sendMotionAppUITests;
+			sourceTree = "<group>";
+		};
+		27D653F91FD0096E002AD14F /* sendMotionApp WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				27D653FA1FD0096E002AD14F /* Interface.storyboard */,
+				27D653FD1FD0096E002AD14F /* Assets.xcassets */,
+				27D653FF1FD0096E002AD14F /* Info.plist */,
+			);
+			path = "sendMotionApp WatchKit App";
+			sourceTree = "<group>";
+		};
+		27D654081FD0096E002AD14F /* sendMotionApp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				27D654091FD0096E002AD14F /* InterfaceController.swift */,
+				27D6540B1FD0096E002AD14F /* ExtensionDelegate.swift */,
+				27D6540D1FD0096E002AD14F /* NotificationController.swift */,
+				27D6540F1FD0096E002AD14F /* Assets.xcassets */,
+				27D654111FD0096E002AD14F /* Info.plist */,
+				27D654121FD0096E002AD14F /* PushNotificationPayload.apns */,
+			);
+			path = "sendMotionApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27D653CC1FD0096E002AD14F /* sendMotionApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D6541D1FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionApp" */;
+			buildPhases = (
+				27D653C91FD0096E002AD14F /* Sources */,
+				27D653CA1FD0096E002AD14F /* Frameworks */,
+				27D653CB1FD0096E002AD14F /* Resources */,
+				27D6541C1FD0096E002AD14F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27D653F81FD0096E002AD14F /* PBXTargetDependency */,
+			);
+			name = sendMotionApp;
+			productName = sendMotionApp;
+			productReference = 27D653CD1FD0096E002AD14F /* sendMotionApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27D653E01FD0096E002AD14F /* sendMotionAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D654201FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionAppTests" */;
+			buildPhases = (
+				27D653DD1FD0096E002AD14F /* Sources */,
+				27D653DE1FD0096E002AD14F /* Frameworks */,
+				27D653DF1FD0096E002AD14F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27D653E31FD0096E002AD14F /* PBXTargetDependency */,
+			);
+			name = sendMotionAppTests;
+			productName = sendMotionAppTests;
+			productReference = 27D653E11FD0096E002AD14F /* sendMotionAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27D653EB1FD0096E002AD14F /* sendMotionAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D654231FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionAppUITests" */;
+			buildPhases = (
+				27D653E81FD0096E002AD14F /* Sources */,
+				27D653E91FD0096E002AD14F /* Frameworks */,
+				27D653EA1FD0096E002AD14F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27D653EE1FD0096E002AD14F /* PBXTargetDependency */,
+			);
+			name = sendMotionAppUITests;
+			productName = sendMotionAppUITests;
+			productReference = 27D653EC1FD0096E002AD14F /* sendMotionAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		27D653F41FD0096E002AD14F /* sendMotionApp WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D654191FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionApp WatchKit App" */;
+			buildPhases = (
+				27D653F31FD0096E002AD14F /* Resources */,
+				27D654181FD0096E002AD14F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27D654071FD0096E002AD14F /* PBXTargetDependency */,
+			);
+			name = "sendMotionApp WatchKit App";
+			productName = "sendMotionApp WatchKit App";
+			productReference = 27D653F51FD0096E002AD14F /* sendMotionApp WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		27D654031FD0096E002AD14F /* sendMotionApp WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D654151FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionApp WatchKit Extension" */;
+			buildPhases = (
+				27D654001FD0096E002AD14F /* Sources */,
+				27D654011FD0096E002AD14F /* Frameworks */,
+				27D654021FD0096E002AD14F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sendMotionApp WatchKit Extension";
+			productName = "sendMotionApp WatchKit Extension";
+			productReference = 27D654041FD0096E002AD14F /* sendMotionApp WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27D653C51FD0096E002AD14F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "井上雄貴";
+				TargetAttributes = {
+					27D653CC1FD0096E002AD14F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					27D653E01FD0096E002AD14F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 27D653CC1FD0096E002AD14F;
+					};
+					27D653EB1FD0096E002AD14F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 27D653CC1FD0096E002AD14F;
+					};
+					27D653F41FD0096E002AD14F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					27D654031FD0096E002AD14F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 27D653C81FD0096E002AD14F /* Build configuration list for PBXProject "sendMotionApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27D653C41FD0096E002AD14F;
+			productRefGroup = 27D653CE1FD0096E002AD14F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27D653CC1FD0096E002AD14F /* sendMotionApp */,
+				27D653E01FD0096E002AD14F /* sendMotionAppTests */,
+				27D653EB1FD0096E002AD14F /* sendMotionAppUITests */,
+				27D653F41FD0096E002AD14F /* sendMotionApp WatchKit App */,
+				27D654031FD0096E002AD14F /* sendMotionApp WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27D653CB1FD0096E002AD14F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D653DB1FD0096E002AD14F /* LaunchScreen.storyboard in Resources */,
+				27D653D81FD0096E002AD14F /* Assets.xcassets in Resources */,
+				27D653D61FD0096E002AD14F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D653DF1FD0096E002AD14F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D653EA1FD0096E002AD14F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D653F31FD0096E002AD14F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D653FE1FD0096E002AD14F /* Assets.xcassets in Resources */,
+				27D653FC1FD0096E002AD14F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D654021FD0096E002AD14F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D654101FD0096E002AD14F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27D653C91FD0096E002AD14F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D653D31FD0096E002AD14F /* ViewController.swift in Sources */,
+				27D653D11FD0096E002AD14F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D653DD1FD0096E002AD14F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D653E61FD0096E002AD14F /* sendMotionAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D653E81FD0096E002AD14F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D653F11FD0096E002AD14F /* sendMotionAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D654001FD0096E002AD14F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D6540E1FD0096E002AD14F /* NotificationController.swift in Sources */,
+				27D6540C1FD0096E002AD14F /* ExtensionDelegate.swift in Sources */,
+				27D6540A1FD0096E002AD14F /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27D653E31FD0096E002AD14F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27D653CC1FD0096E002AD14F /* sendMotionApp */;
+			targetProxy = 27D653E21FD0096E002AD14F /* PBXContainerItemProxy */;
+		};
+		27D653EE1FD0096E002AD14F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27D653CC1FD0096E002AD14F /* sendMotionApp */;
+			targetProxy = 27D653ED1FD0096E002AD14F /* PBXContainerItemProxy */;
+		};
+		27D653F81FD0096E002AD14F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27D653F41FD0096E002AD14F /* sendMotionApp WatchKit App */;
+			targetProxy = 27D653F71FD0096E002AD14F /* PBXContainerItemProxy */;
+		};
+		27D654071FD0096E002AD14F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27D654031FD0096E002AD14F /* sendMotionApp WatchKit Extension */;
+			targetProxy = 27D654061FD0096E002AD14F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27D653D41FD0096E002AD14F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27D653D51FD0096E002AD14F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27D653D91FD0096E002AD14F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27D653DA1FD0096E002AD14F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		27D653FA1FD0096E002AD14F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27D653FB1FD0096E002AD14F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27D654131FD0096E002AD14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27D654141FD0096E002AD14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27D654161FD0096E002AD14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				INFOPLIST_FILE = "sendMotionApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		27D654171FD0096E002AD14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				INFOPLIST_FILE = "sendMotionApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
+		27D6541A1FD0096E002AD14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				IBSC_MODULE = sendMotionApp_WatchKit_Extension;
+				INFOPLIST_FILE = "sendMotionApp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		27D6541B1FD0096E002AD14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				IBSC_MODULE = sendMotionApp_WatchKit_Extension;
+				INFOPLIST_FILE = "sendMotionApp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
+		27D6541E1FD0096E002AD14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				INFOPLIST_FILE = sendMotionApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27D6541F1FD0096E002AD14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				INFOPLIST_FILE = sendMotionApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		27D654211FD0096E002AD14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				INFOPLIST_FILE = sendMotionAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sendMotionApp.app/sendMotionApp";
+			};
+			name = Debug;
+		};
+		27D654221FD0096E002AD14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				INFOPLIST_FILE = sendMotionAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sendMotionApp.app/sendMotionApp";
+			};
+			name = Release;
+		};
+		27D654241FD0096E002AD14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				INFOPLIST_FILE = sendMotionAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sendMotionApp;
+			};
+			name = Debug;
+		};
+		27D654251FD0096E002AD14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZZHKQZ59ZC;
+				INFOPLIST_FILE = sendMotionAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = inoueyoshitaka.sendMotionAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sendMotionApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27D653C81FD0096E002AD14F /* Build configuration list for PBXProject "sendMotionApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D654131FD0096E002AD14F /* Debug */,
+				27D654141FD0096E002AD14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D654151FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionApp WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D654161FD0096E002AD14F /* Debug */,
+				27D654171FD0096E002AD14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D654191FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionApp WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D6541A1FD0096E002AD14F /* Debug */,
+				27D6541B1FD0096E002AD14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D6541D1FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D6541E1FD0096E002AD14F /* Debug */,
+				27D6541F1FD0096E002AD14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D654201FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D654211FD0096E002AD14F /* Debug */,
+				27D654221FD0096E002AD14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D654231FD0096E002AD14F /* Build configuration list for PBXNativeTarget "sendMotionAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D654241FD0096E002AD14F /* Debug */,
+				27D654251FD0096E002AD14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27D653C51FD0096E002AD14F /* Project object */;
+}
