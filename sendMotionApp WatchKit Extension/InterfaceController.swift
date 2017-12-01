@@ -13,6 +13,21 @@ import CoreMotion
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
+    @IBOutlet var StartBtn: WKInterfaceButton!
+    @IBOutlet var StopBtn: WKInterfaceButton!
+    
+    @IBAction func pushStartBtn() {
+        self.sendMessage()
+        StartBtn.setHidden(true)
+        StopBtn.setHidden(false)
+    }
+    
+    @IBAction func pushStopBtn() {
+        StartBtn.setHidden(false)
+        StopBtn.setHidden(true)
+        motionManager.stopDeviceMotionUpdates()
+    }
+    
     let motionManager = CMMotionManager()
     let queue = OperationQueue()
     
@@ -22,9 +37,48 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var rotationRate = ""
     var userAcceleration = ""
     
+    var workout = ""
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         activateSession()
+        StopBtn.setHidden(true)
+        
+//        if !motionManager.isDeviceMotionAvailable {
+//            print("Device Motion is not available.")
+//            return
+//        }
+//
+//        motionManager.startDeviceMotionUpdates(to: queue) { (deviceMotion: CMDeviceMotion?, error: Error?) in
+//            if error != nil {
+//                print("Encountered error: \(error!)")
+//            }
+//
+//            if deviceMotion != nil {
+//                self.attitude = "\(deviceMotion!.attitude)"
+//                self.gravity = "\(deviceMotion!.gravity)"
+//                self.rotationRate = "\(deviceMotion!.rotationRate)"
+//                self.userAcceleration = "\(deviceMotion!.userAcceleration)"
+//
+////                print(self.attitude)
+////                print(self.gravity)
+////                print(self.rotationRate)
+////                print(self.userAcceleration)
+//            }
+//            sleep(UInt32(0.5))
+//        }
+    }
+    
+    func activateSession(){
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+    }
+    
+    func sendMessage(){
+        let randNum = arc4random_uniform(10000000)
         
         if !motionManager.isDeviceMotionAvailable {
             print("Device Motion is not available.")
@@ -41,35 +95,31 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 self.gravity = "\(deviceMotion!.gravity)"
                 self.rotationRate = "\(deviceMotion!.rotationRate)"
                 self.userAcceleration = "\(deviceMotion!.userAcceleration)"
+                
+                //                print(self.attitude)
+                //                print(self.gravity)
+                //                print(self.rotationRate)
+                //                print(self.userAcceleration)
             }
-            sleep(UInt32(0.5))
-            self.sendMessage()
-        }
-    }
-    
-    func activateSession(){
-        if WCSession.isSupported() {
-            let session = WCSession.default
-            session.delegate = self
-            session.activate()
-        }
-    }
-    
-    func sendMessage(){
-        if WCSession.default.isReachable {
-            applicationDict = [
-                "attitude": attitude,
-                "gravity": gravity,
-                "rotationRate": rotationRate,
-                "userAcceleration": userAcceleration
-            ]
-
-            WCSession.default.sendMessage(applicationDict, replyHandler: {(reply) -> Void in
-                print(reply)
-            }){(error) -> Void in
-                print(error)
+            
+//            sleep(UInt32(0.5))
+            if WCSession.default.isReachable {
+                self.applicationDict = [
+                    "deviceLabel": "D\(randNum)",
+                    "attitude": self.attitude,
+                    "gravity": self.gravity,
+                    "rotationRate": self.rotationRate,
+                    "userAcceleration": self.userAcceleration
+                ]
+                
+                WCSession.default.sendMessage(self.applicationDict, replyHandler: {(reply) -> Void in
+                    print(reply)
+                }){(error) -> Void in
+                    print(error)
+                }
             }
         }
+//        print(applicationDict["deviceLabel"])
     }
     
     @available(watchOS 2.2, *)
@@ -80,4 +130,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
 
     }
+    
+    
 }
