@@ -95,11 +95,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 self.gravity = "\(deviceMotion!.gravity)"
                 self.rotationRate = "\(deviceMotion!.rotationRate)"
                 self.userAcceleration = "\(deviceMotion!.userAcceleration)"
-                
-                                print(self.attitude)
-                                print(self.gravity)
-                                print(self.rotationRate)
-                                print(self.userAcceleration)
+//
+//                                print(self.attitude)
+//                                print(self.gravity)
+//                                print(self.rotationRate)
+//                                print(self.userAcceleration)
             }
             
 //            sleep(UInt32(0.5))
