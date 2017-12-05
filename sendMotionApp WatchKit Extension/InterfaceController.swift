@@ -77,47 +77,50 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func sendMessage(){
-        let randNum = arc4random_uniform(10000000)
+//        let randNum = arc4random_uniform(10000000)
         
-        if !motionManager.isDeviceMotionAvailable {
-            print("Device Motion is not available.")
-            return
+//        if !motionManager.isDeviceMotionAvailable {
+//            print("Device Motion is not available.")
+//            return
+//        }
+        
+        if WCSession.default.isReachable {
+            self.applicationDict = [
+                //                    "deviceLabel": "D\(randNum)",
+                //                    "attitude": self.attitude,
+                //                    "gravity": self.gravity,
+                //                    "rotationRate": self.rotationRate,
+                //                    "userAcceleration": self.userAcceleration
+                "test":"test"
+            ]
+            
+            WCSession.default.sendMessage(self.applicationDict, replyHandler: {(reply) -> Void in
+                print(reply)
+            }){(error) -> Void in
+                print(error)
+            }
         }
         
-        motionManager.startDeviceMotionUpdates(to: queue) { (deviceMotion: CMDeviceMotion?, error: Error?) in
-            if error != nil {
-                print("Encountered error: \(error!)")
-            }
-            
-            if deviceMotion != nil {
-                self.attitude = "\(deviceMotion!.attitude)"
-                self.gravity = "\(deviceMotion!.gravity)"
-                self.rotationRate = "\(deviceMotion!.rotationRate)"
-                self.userAcceleration = "\(deviceMotion!.userAcceleration)"
-//
-//                                print(self.attitude)
-//                                print(self.gravity)
-//                                print(self.rotationRate)
-//                                print(self.userAcceleration)
-            }
+//        motionManager.startDeviceMotionUpdates(to: queue) { (deviceMotion: CMDeviceMotion?, error: Error?) in
+//            if error != nil {
+//                print("Encountered error: \(error!)")
+//            }
+        
+//            if deviceMotion != nil {
+//                self.attitude = "\(deviceMotion!.attitude)"
+//                self.gravity = "\(deviceMotion!.gravity)"
+//                self.rotationRate = "\(deviceMotion!.rotationRate)"
+//                self.userAcceleration = "\(deviceMotion!.userAcceleration)"
+////
+////                                print(self.attitude)
+////                                print(self.gravity)
+////                                print(self.rotationRate)
+////                                print(self.userAcceleration)
+//            }
             
 //            sleep(UInt32(0.5))
-            if WCSession.default.isReachable {
-                self.applicationDict = [
-                    "deviceLabel": "D\(randNum)",
-                    "attitude": self.attitude,
-                    "gravity": self.gravity,
-                    "rotationRate": self.rotationRate,
-                    "userAcceleration": self.userAcceleration
-                ]
-                
-                WCSession.default.sendMessage(self.applicationDict, replyHandler: {(reply) -> Void in
-                    print(reply)
-                }){(error) -> Void in
-                    print(error)
-                }
-            }
-        }
+            
+//        }
 //        print(applicationDict["deviceLabel"])
     }
     
