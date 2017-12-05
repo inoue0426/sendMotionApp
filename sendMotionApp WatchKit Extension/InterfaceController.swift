@@ -36,7 +36,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var gravity = ""
     var rotationRate = ""
     var userAcceleration = ""
-    
     var workout = ""
     
     override func awake(withContext context: Any?) {
