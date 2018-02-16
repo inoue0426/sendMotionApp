@@ -16,9 +16,9 @@ class ViewController: UIViewController, WCSessionDelegate {
         activateSession()
     }
 
-    func activateSession(){
+    func activateSession(){ 
         if WCSession.isSupported() {
-            let session = WCSession.default
+            let session: WCSession = WCSession.default
             session.delegate = self
             session.activate()
         }
@@ -31,13 +31,34 @@ class ViewController: UIViewController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
 //        var request = URLRequest(url: NSURL(string: "https://script.google.com/macros/s/AKfycbx592MBeBoz8pygZESl7etv6ws3gfADMZxV4oGHRY7Z11GvEhV0/exec?attitude=\(String(describing: message["attitude"]))&gravity=\(String(describing: message["gravity"]))&rotationRate=\(String(describing: message["rotationRate"]))&userAcceleration=\(String(describing: message["userAcceleration"]))&time=22")! as URL)
         
-        var request = URLRequest(url: NSURL(string: "https://script.google.com/macros/s/AKfycbx592MBeBoz8pygZESl7etv6ws3gfADMZxV4oGHRY7Z11GvEhV0/exec?attitude=10&gravity=20&rotationRate=30&userAcceleration=40&time=22")! as URL)
-        request.httpMethod = "GET"
-//        NSURLConnection.sendSynchronousRequest(request, returning: nil)
+        // let urlString = "https://www.google.co.jp/"
+        // let request = NSMutableURLRequest(url: URL(string: urlString)!)
         
-        replyHandler(["reply" : "test"])
+        // request.httpMethod = "POST"
+        
+        // let params:[String:Any] = message
+        
+        // do{
+        //     request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+            
+        //     let task:URLSessionDataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data,response,error) -> Void in
+        //         let resultData = String(data: data!, encoding: .utf8)!
+        //         print("result:\(resultData)")
+        //         print("response:\(String(describing: response))")
+                
+        //     })
+        //     task.resume()
+        // }catch{
+        //     print("Error:\(error)")
+        //     return
+        // }
+//
+        replyHandler(
+            ["reply" : message as Any])
     }
-    
+//    "gravity": self.gravity,
+//    "rotationRate": self.rotationRate,
+//    "userAcceleration": self.userAcceleration
   
     
     @available(iOS 9.3, *)

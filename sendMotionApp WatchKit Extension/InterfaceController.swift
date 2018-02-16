@@ -20,7 +20,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         StartBtn.setHidden(true)
         StopBtn.setHidden(false)
         print("start")
-        randNum = String(arc4random_uniform(10000000))
+        // randNum = String(arc4random_uniform(10000000))
         sendMessage()
     }
     
@@ -29,7 +29,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         print("stop")
         StartBtn.setHidden(false)
         StopBtn.setHidden(true)
-        randNum = ""
+        // randNum = ""
         sendMessage()
     }
     
@@ -52,7 +52,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func activateSession(){
         if WCSession.isSupported() {
-            let session = WCSession.default
+            let session: WCSession = WCSession.default
             session.delegate = self
             session.activate()
         }
@@ -83,7 +83,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 
                 if WCSession.default.isReachable {
                     self.applicationDict = [
-                        "deviceLabel": self.randNum,
+                        // "deviceLabel": self.randNum,
                         "attitude": self.attitude,
                         "gravity": self.gravity,
                         "rotationRate": self.rotationRate,
