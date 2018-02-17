@@ -82,8 +82,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 }
                 
                 if WCSession.default.isReachable {
+                    
+                    let date = Date()
+                    
                     self.applicationDict = [
-                        // "deviceLabel": self.randNum,
+                        "date": String(describing: date),
                         "attitude": self.attitude,
                         "gravity": self.gravity,
                         "rotationRate": self.rotationRate,
@@ -107,6 +110,4 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
     }
-    
-    
 }

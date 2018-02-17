@@ -24,45 +24,31 @@ class ViewController: UIViewController, WCSessionDelegate {
         }
     }
     
-    
-    
-    
-    
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-//        var request = URLRequest(url: NSURL(string: "https://script.google.com/macros/s/AKfycbx592MBeBoz8pygZESl7etv6ws3gfADMZxV4oGHRY7Z11GvEhV0/exec?attitude=\(String(describing: message["attitude"]))&gravity=\(String(describing: message["gravity"]))&rotationRate=\(String(describing: message["rotationRate"]))&userAcceleration=\(String(describing: message["userAcceleration"]))&time=22")! as URL)
         
-
-        replyHandler(["reply" : message["attitude"] as Any])
-        // let urlString = "https://www.google.co.jp/"
-        // let request = NSMutableURLRequest(url: URL(string: urlString)!)
+        let urlString = "https://script.google.com/macros/s/AKfycbw5XrPKcUgFgNv9ZYGiMSPk_OUsM8jj-EyygSDPZbNV1tqeJlmY/exec"
         
-        // request.httpMethod = "POST"
+        let request = NSMutableURLRequest(url: URL(string: urlString)!)
         
-        // let params:[String:Any] = message
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        // do{
-        //     request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-            
-        //     let task:URLSessionDataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data,response,error) -> Void in
-        //         let resultData = String(data: data!, encoding: .utf8)!
-        //         print("result:\(resultData)")
-        //         print("response:\(String(describing: response))")
-                
-        //     })
-        //     task.resume()
-        // }catch{
-        //     print("Error:\(error)")
-        //     return
-        // }
-//
-//         replyHandler(
-//             ["reply" : message as Any])
-// >>>>>>> 1e83a1276ccafc5fd043ace16d198e2b5cc81dc5
+        let params:[String:Any] = message
+        
+        do{
+            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+            let task:URLSessionDataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data,response,error) -> Void in
+                let resultData = String(data: data!, encoding: .utf8)!
+                print("result:\(resultData)")
+                print("response:\(String(describing: response))")
+            })
+            task.resume()
+        }catch{
+            print("Error:\(error)")
+            return
+        }
+        replyHandler(["reply" : "Done"])
     }
-//    "gravity": self.gravity,
-//    "rotationRate": self.rotationRate,
-//    "userAcceleration": self.userAcceleration
-  
     
     @available(iOS 9.3, *)
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
