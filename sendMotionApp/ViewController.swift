@@ -35,7 +35,7 @@ class ViewController: UIViewController, WCSessionDelegate {
 //        request.httpMethod = "GET"
 //        NSURLConnection.sendSynchronousRequest(request, returning: nil)
         
-        replyHandler(["reply" : "test"])
+        replyHandler(["reply" : message["attitude"] as Any])
     }
     
   
