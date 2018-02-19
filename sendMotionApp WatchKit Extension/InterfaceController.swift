@@ -60,6 +60,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func sendMessage(){
         if !motionManager.isDeviceMotionAvailable {
+            motionManager.deviceMotionUpdateInterval = 1.0 / 300.0
             print("Device Motion is not available.")
             return
         }
@@ -93,7 +94,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                         "rotationRate": self.rotationRate,
                         "userAcceleration": self.userAcceleration
                     ]
-                    sleep(UInt32(0.5))
+                    
                     WCSession.default.sendMessage(self.applicationDict, replyHandler: {(reply) -> Void in
                         print(reply)
                     }){(error) -> Void in
