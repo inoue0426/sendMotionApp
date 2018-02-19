@@ -83,10 +83,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 
                 if WCSession.default.isReachable {
                     
-                    let date = Date()
+                    let now = NSDate()
+                    let srt = DateUtils.stringFromDate(date: now, format: "yyyy-MM-dd HH:mm:ss")
                     
                     self.applicationDict = [
-                        "date": String(describing: date),
+                        "date": srt,
                         "attitude": self.attitude,
                         "gravity": self.gravity,
                         "rotationRate": self.rotationRate,
@@ -100,6 +101,22 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                     }
                 }
             }
+        }
+    }
+    
+    class DateUtils {
+        class func dateFromString(string: String, format: String) -> NSDate {
+            let formatter: DateFormatter = DateFormatter()
+            _ = Calendar(identifier: .gregorian) // グレゴリオ歴
+            formatter.dateFormat = format
+            return formatter.date(from: string)! as NSDate
+        }
+        
+        class func stringFromDate(date: NSDate, format: String) -> String {
+            let formatter: DateFormatter = DateFormatter()
+            _ = Calendar(identifier: .gregorian) // グレゴリオ歴
+            formatter.dateFormat = format
+            return formatter.string(from: date as Date)
         }
     }
     
