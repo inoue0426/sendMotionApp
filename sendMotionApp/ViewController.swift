@@ -25,29 +25,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        
-        let urlString = "https://script.google.com/macros/s/AKfycbw5XrPKcUgFgNv9ZYGiMSPk_OUsM8jj-EyygSDPZbNV1tqeJlmY/exec"
-        
-        let request = NSMutableURLRequest(url: URL(string: urlString)!)
-        
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let params:[String:Any] = message
-        
-        do{
-            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-            let task:URLSessionDataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data,response,error) -> Void in
-                let resultData = String(data: data!, encoding: .utf8)!
-                print("result:\(resultData)")
-                print("response:\(String(describing: response))")
-            })
-            task.resume()
-        }catch{
-            print("Error:\(error)")
-            return
-        }
-        replyHandler(["reply" : "Done"])
+        replyHandler(["reply" : "test"])
     }
     
     @available(iOS 9.3, *)
